@@ -1,3 +1,8 @@
+#ifndef __LABFILE_H__
+#define __LABFILE_H__
 # include <vector>
 
-int Lab_max_sub(std::vector<int> input_list);
+int LabMaxSub(std::vector<int> input_list);
+int LabMain(std::vector<int> arr);
+#endif 
+

@@ -27,10 +27,16 @@
     <ClCompile Include="Lab_max_sub.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="linearList.cpp">
+    <ClCompile Include="linklist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="chainedList.cpp">
+    <ClCompile Include="seqlist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="queue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +47,13 @@
     <ClInclude Include="labfile.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="chainedlist.h">
+    <ClInclude Include="seqlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linklist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
