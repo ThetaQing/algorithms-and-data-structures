@@ -1,3 +1,31 @@
+// 时间8.1ms，内存8.2m
+class Solution {
+public:
+    bool isPalindrome(int x) {   
+          
+        if(x<0)
+            return false;
+        else if(x==0)
+            return true;
+        else
+        {
+            int input_x = x;
+            long int y=0;
+             for(;x;y = y*10+x%10, x/=10);
+              
+             if(y == input_x)
+                 return true;
+             else
+                 return false;
+
+              
+        
+        }
+        return false;
+    }  
+    
+};
+
 // 时间16ms，内存8.1m
 // 主要思想是存储在另一个变量中，返回这两个数是否相等即可
 class Solution {
