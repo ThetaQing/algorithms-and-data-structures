@@ -112,10 +112,9 @@ void ClearLinkList(LinkList L)
 */
 Status isLinkListEmpty(LinkList L)
 {
-	if (L->next)
+	if(L->next)
 		return FALSE;
-	else
-		return TRUE;
+	return TRUE;
 }
 
 /*

@@ -1,16 +1,13 @@
 #pragma once
 #ifndef __SEQLIST_H__
 #define __SEQLIST_H__
+#include "common.h"
 
 # define INIT_SIZE 10  // 初始化列表长
 # define INCREMENT_SIZE 5  // 分配增量
-# define OK 1  // 操作成功
-# define ERROR 0  // 操作失败
-# define TRUE 1  // 真
-# define FALSE 0  // 假
 
-typedef int Elemtype;  // 定义结构体元素的类型
-typedef int Status;  // 定义别名
+
+
 
 /*
 定义一个结构体

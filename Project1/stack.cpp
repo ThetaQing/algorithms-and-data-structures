@@ -128,4 +128,5 @@ int TestStack()
 			cout << "destroy success." << endl;
 			   
 	}
+	return 0;
 }

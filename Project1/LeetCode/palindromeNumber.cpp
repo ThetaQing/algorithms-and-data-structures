@@ -1,3 +1,4 @@
+#include <vector>
 // 时间8.1ms，内存8.2m
 class Solution {
 public:
@@ -56,7 +57,7 @@ public:
 class Solution {
 public:
     bool isPalindrome(int x) {
-        vector<int> vet;
+        std::vector<int> vet;
         int temp;
         if(x<0)
             return false;

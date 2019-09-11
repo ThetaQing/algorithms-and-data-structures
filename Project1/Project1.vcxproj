@@ -123,18 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab_max_sub.cpp" />
+    <ClCompile Include="LeetCode\reverse.cpp" />
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="seqlist.cpp" />
     <ClCompile Include="linklist.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="numPrimeArrangements.cpp" />
-    <ClCompile Include="reverse.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="labfile.h" />
-    <ClInclude Include="LeetCode.h" />
+    <ClInclude Include="LeetCode\labfile.h" />
+    <ClInclude Include="LeetCode\LeetCode.h" />
     <ClInclude Include="linklist.h" />
     <ClInclude Include="seqlist.h" />
     <ClInclude Include="stack.h" />

@@ -1,10 +1,7 @@
 #ifndef __LINKLIST_H__
 #define __LINKLIST_H__
 #include <iostream>
-# define OK 1  // 操作成功
-# define ERROR 0  // 操作失败
-# define TRUE 1  // 真
-# define FALSE 0  // 假
+#include "common.h"
 using namespace std;
 typedef int Elemtype;  // 定义结构体元素的类型
 typedef int Status;  // 定义别名
