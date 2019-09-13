@@ -36,6 +36,12 @@
     <ClCompile Include="LeetCode\reverse.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="binarytree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="longestCommonPrefix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqlist.h">
@@ -51,6 +57,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="LeetCode\LeetCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

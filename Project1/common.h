@@ -1,6 +1,6 @@
 #ifndef __COMMON_H__
 #define __COMMON_H__
-
+# include <iostream>
 #define TRUE 1
 #define FALSE 0;
 #define OK 1
