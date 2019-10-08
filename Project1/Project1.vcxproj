@@ -124,8 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="binarytree.cpp" />
+    <ClCompile Include="isBracketValid.cpp" />
     <ClCompile Include="LeetCode\reverse.cpp" />
     <ClCompile Include="longestCommonPrefix.cpp" />
+    <ClCompile Include="mysort.cpp" />
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="seqlist.cpp" />
     <ClCompile Include="linklist.cpp" />
@@ -139,7 +141,9 @@
     <ClInclude Include="LeetCode\labfile.h" />
     <ClInclude Include="LeetCode\LeetCode.h" />
     <ClInclude Include="linklist.h" />
+    <ClInclude Include="mysort.h" />
     <ClInclude Include="seqlist.h" />
+    <ClInclude Include="sort.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -42,6 +42,12 @@
     <ClCompile Include="longestCommonPrefix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="mysort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="isBracketValid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqlist.h">
@@ -63,6 +69,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="binarytree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mysort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
