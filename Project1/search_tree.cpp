@@ -41,12 +41,12 @@ using namespace std;
 * 函数功能：
 * 其他说明：
 
-
-
-**/
 template <typename K, typename E>
 pair <const K, E>* binarySearchTree <K, E> ::find(const K& theKey) 
 {
 
 }
+
+
+**/
 

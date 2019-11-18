@@ -2,6 +2,8 @@
 #define __SEARCH_TREE_H__
 
 // C++抽象类 bsTree，二叉搜索树
+/********************  
+* 注释原因：前面有一部分类没有完成，先完成前面的
 template <typename K, typename E>
 class binarySearchTree : public dictionary<K, E>  // dictionary P237
 {
@@ -21,5 +23,5 @@ public:
 	virtual void delete(int) = 0;
 	// 根据给定的索引，删除其数对
 };
-
+*/
 #endif 

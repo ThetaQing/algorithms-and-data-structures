@@ -48,6 +48,15 @@
     <ClCompile Include="isBracketValid.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="search_tree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linear_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bin_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqlist.h">
@@ -77,5 +86,22 @@
     <ClInclude Include="sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="search_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linear_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="algostuff.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bin_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

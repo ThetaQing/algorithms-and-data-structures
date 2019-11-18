@@ -124,11 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="binarytree.cpp" />
+    <ClCompile Include="bin_sort.cpp" />
     <ClCompile Include="isBracketValid.cpp" />
     <ClCompile Include="LeetCode\reverse.cpp" />
+    <ClCompile Include="linear_list.cpp" />
     <ClCompile Include="longestCommonPrefix.cpp" />
     <ClCompile Include="mysort.cpp" />
     <ClCompile Include="queue.cpp" />
+    <ClCompile Include="search_tree.cpp" />
     <ClCompile Include="seqlist.cpp" />
     <ClCompile Include="linklist.cpp" />
     <ClCompile Include="main.cpp" />
@@ -136,15 +139,22 @@
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="algostuff.hpp" />
     <ClInclude Include="binarytree.h" />
+    <ClInclude Include="bin_sort.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="LeetCode\labfile.h" />
     <ClInclude Include="LeetCode\LeetCode.h" />
+    <ClInclude Include="linear_list.h" />
     <ClInclude Include="linklist.h" />
     <ClInclude Include="mysort.h" />
+    <ClInclude Include="search_tree.h" />
     <ClInclude Include="seqlist.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="stack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
