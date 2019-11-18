@@ -2,7 +2,12 @@
 #define __LINEAR_LIST_H__
 #include <iostream>
 #include <sstream>
+
 using namespace std;
+// 其他函数声明
+void testBinSort();
+
+
 // 线性表的抽象类
 template<typename T>
 class linearList
@@ -300,7 +305,7 @@ void chain<T>::insert(int theIndex, const T& theElement)
 	checkIndex(theIndex);
 	if (theIndex == 0)  // 在表头插入
 	{
-		firstNode = new chainNode<theElement, firstNode>;  // new返回的是地址
+		firstNode = new chainNode<T>(theElement, firstNode);  // new返回的是地址
 	}
 	else
 	{
@@ -310,7 +315,7 @@ void chain<T>::insert(int theIndex, const T& theElement)
 		{
 			p = p->next;
 		}
-		p->next = new chainNode<theElement, p->next>;  // 新建这个插入的节点		
+		p->next = new chainNode<T>(theElement, p->next);  // 新建这个插入的节点		
 
 	}
 	listSize += 1;
@@ -336,19 +341,7 @@ void chain<T>::checkIndex(int theIndex)const
 }
 
 
-/******************函数说明**********************
-* 函数名：operator<<(ostream& out, const chain<T>& x)
-* 函数参数：输出流对象，链表
-* 函数返回值：输出流对象
-* 其他说明：重载 <<
-		重载的运算符是带有特殊名称的函数，函数名是由关键字operator和其后要重载的运算符符号构成，有一个返回类型和一个参数列表。
-**/
-template <typename T>
-ostream& operator<<(ostream& out, const chain<T>& x)
-{
-	x.output(out);
-	return out;
-}
+
 
 /******************函数说明******************
 * 函数名：output(ostream& out)const
@@ -364,12 +357,25 @@ ostream& operator<<(ostream& out, const chain<T>& x)
 template <typename T>
 void chain<T>::output(ostream& out)const
 {
-	for (chainNode<T>* curentNode = firstNode; curentNode->next != NULL; curentNode = curentNode->next)
+	for (chainNode<T>* currentNode = firstNode; currentNode != NULL; currentNode = currentNode->next)
 	{
-		out << curentNode->element << " ";
+		
+		out << currentNode->element << "  ";
 	}
 }
-
+/******************函数说明**********************
+* 函数名：operator<<(ostream& out, const chain<T>& x)
+* 函数参数：输出流对象，链表
+* 函数返回值：输出流对象
+* 其他说明：重载 <<
+		重载的运算符是带有特殊名称的函数，函数名是由关键字operator和其后要重载的运算符符号构成，有一个返回类型和一个参数列表。
+**/
+template <typename T>
+ostream& operator<<(ostream& out, const chain<T>& x)
+{
+	x.output(out);
+	return out;
+}
 
 /********************函数说明*********************
 * 函数名：clear()
@@ -384,7 +390,7 @@ template <typename T>
 void chain<T> ::clear()
 {
 	
-	while (nextNode->next != NULL)
+	while (firstNode->next != NULL)
 	{
 		chainNode<T>* nextNode = firstNode->next;  // 一定要指向要删除节点的下一个节点，否则删除这个节点之后，这个节点的指针域就没有意义了，找不到下一个节点
 		delete firstNode;
@@ -407,14 +413,15 @@ void chain<T>::binSort(int range)
 	// 对链表中的节点排序
 	// 创建并初始化箱子
 	chainNode<T>** bottom, ** top;  // 跟踪首尾节点
-	bottom = new chainNode<T>* [range + 1];  // 指向节点指针的指针
-	top = new chainNode<T>* [range + 1];  // 指向节点指针的指针
+	int len = range + 1;
+	bottom = new chainNode<T>* [len];  // 指向节点指针的指针
+	top = new chainNode<T>* [len];  // 指向节点指针的指针
 	for (int b = 0; b <= range; ++b)
 	{
 		bottom[b] = NULL;
 	}
 	// 把链表的节点分配给箱子
-	for (; firstNode != NULL firstNode = firstNode->next)
+	for (; firstNode != NULL;firstNode = firstNode->next)
 	{
 		// 把首节点加到箱子中
 		int theBin = firstNode->element;  // 元素类型转换到整型,变成索引
@@ -437,7 +444,9 @@ void chain<T>::binSort(int range)
 				firstNode = bottom[theBin];
 			else
 				y->next = bottom[theBin];  // 不是第一个非空箱子
+			y = top[theBin];
 		}
+
 
 	}
 	if (y != NULL)

@@ -1,6 +1,7 @@
 #ifndef __BIN_SORT_H__
 #define __BIN_SORT_H__
-#include <iostream>
+#include <string>
+
 using namespace std;
 /*************文件说明****************
 * 文件名：bin_sort.h
@@ -11,31 +12,45 @@ using namespace std;
 
 **/
 
+// 结构体定义
 struct studentRecord
 {
 	int score;
 	std::string* name;
+	/*
 	int operator != (const studentRecord& x)const  // 重载运算符 ！=,它把studentRecord类型转换为数值类型，以实现比较操作和其他目的
 	{
 		return (score != x.score);
-	}	
+	}*/	
 	operator int() const  // 重载类型转换操作符int()，其他算术和关系操作符虽然没有重载或明确定义，但是可以通过int()类型转换操作符转换成int类型完成操作
 	{
 		return score;
 	}
+	studentRecord() {};
+	studentRecord(string*name, int score) 
+	{
+		this->name = name;
+		this->score = score;
+	}
 };
 
-std::ostream& operator<<(ostream& out, const studentRecord& x)  // 重载运算符 <<
+/*************函数说明****************
+
+* 函数名：
+* 函数参数：
+* 函数返回值：
+* 函数功能：重载运算符<<
+ostream& operator<<(ostream& out, const studentRecord& x)  // 重载运算符 <<
 {
-	out << x.score << " " << *x.name << endl;
+	out << x.score << ' ' << *x.name << endl;
 	return out;
 
-}
+}*/
 
 
 
-
-
+// 其他函数声明
+//void binSort2(chain<studentRecord>& theChain, int range);
 
 
 

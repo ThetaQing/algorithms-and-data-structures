@@ -1,5 +1,6 @@
 #include <iostream>
 #include "linear_list.h"
+#include "bin_sort.h"
 using namespace std;
 
 
@@ -13,3 +14,25 @@ using namespace std;
 
 
 **/
+
+void testBinSort()
+{
+	chain<studentRecord> the_chain;
+	
+	string A, B, C;
+	A = "A";
+	B = "B";
+	C = "C";
+	studentRecord student1{ &A, 3 }, student2{ &B,1 }, student3{&C, 2};
+	
+	
+
+	the_chain.insert(0, student1);
+	the_chain.insert(0, student2);
+	the_chain.insert(0, student3);
+	//the_chain.output(*out);
+	cout << "  " << the_chain << endl;
+	the_chain.binSort(4);
+	cout << "  " << the_chain<< endl;
+	//the_chain.output(*out);
+}

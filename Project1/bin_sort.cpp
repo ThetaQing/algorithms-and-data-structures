@@ -17,8 +17,8 @@ using namespace std;
 		1、连续删除链表的首元素，并将其插入插入相应的某个箱子的链表首位；
 		2、从最后一个箱子开始（按照从小到大排序），逐个删除每个箱子的元素，并将其插入一个初始为空的链表的首位
 * 时间复杂度：如果不考虑内存分配异常的话，第一个for循环O(n)，第二个for循环O(range)，总的时间复杂度O(n+range)
-**/
-void binSort(chain<studentRecord>& theChain, int range)
+
+void binSort2(chain<studentRecord>& theChain, int range)
 {
 	// 按分数排序
 
@@ -46,6 +46,6 @@ void binSort(chain<studentRecord>& theChain, int range)
 		}
 	}
 	delete[] bin;  // 释放内存
-}
+}**/
 
 
