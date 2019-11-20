@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include"linear_list.h"
-#include "bin_sort.h"
+#include "linear_list_apply.h"
 using namespace std;
 
 
