@@ -1,5 +1,5 @@
 #include <iostream>
-#include "bin_sort.h"
+#include "linear_list_apply.h"
 #include "linear_list.h"
 using namespace std;
 /***********文件说明************
@@ -47,5 +47,90 @@ void binSort2(chain<studentRecord>& theChain, int range)
 	}
 	delete[] bin;  // 释放内存
 }
+/************************************
+=====================================
+
+* 程序编号：6-19 数据结构 P140
+* 程序功能：使用数组实现的并查集算法
+* 全局变量：int* equivClass, n;   分别表示等价类数组和元素个数
+* 说明：数组equivClass中equivClass[i]为包含元素i的等价类
+* 时间复杂度：通常执行一次初始化、u次合并和f次查找，时间复杂度为O(n+u*n+f)
+=====================================
+
+**/
+
+int* equivClass, n;  // 分别表示等价类数组和元素个数
+/******************函数说明**********************
+
+* 函数名：void initialize(int numberOfElement)
+* 函数参数：元素个数
+* 函数返回值:空
+* 函数功能：用每个类的一个元素，初始化numberOfElements个类
+* 时间复杂度：O(n)
+
+
+**/
+
+
+void initialize(int numberOfElement)
+{
+	n = numberOfElement;
+	equivClass = new int[n + 1];
+	for (int e = 1; e <= n; ++e)  // 类别是按非0自然数顺序排序
+	{
+		equivClass[e] = e;
+	}
+}
+
+/*******************函数说明********************
+
+* 函数名：void unite(int classA, int classB)
+* 函数参数：两个不同的类classA和classB
+* 函数返回值：空，全局指针返回两个类的unite计算结果
+* 函数功能：合并类classA和classB，将classB的元素全部合并称为classA类
+* 时间复杂度：O(n)
+
+**/
+void unite(int classA, int classB)
+{
+	for (int k = 1; k <= n; ++k)  // 嘉禾classA ！= classB
+	{
+		if (equivClass[k] == classB)  // 找到所有classB中的元素，把这些元素全部合并到classA类中
+			equivClass[k] = classA;
+	}
+
+}
+/*******************函数说明********************
+
+* 函数名：int find(int theElement)
+* 函数参数：待查找元素
+* 函数返回值：返回具有这个元素的类
+* 函数功能：查找具有元素theElement的类
+* 时间复杂度：O(1)
+**/
+int find(int theElement)
+{
+	return equivClass[theElement];
+}
+
+/*******************函数说明*******************
+* 函数名：void testUnionFindWithArrays(void)
+* 函数参数：空
+* 函数返回值：空
+* 函数功能：对6-19程序进行测试
+
+**/
+void testUnionFindWithArrays(void)
+{
+	initialize(10);
+	unite(1, 2);  // 执行后1、2均为equivClass[1]类
+	unite(3, 4);  // 执行后3、4均为equivClass[3]类
+	unite(1, 3);  // 执行前，3、4均为equivClass[3]类，执行后，3、4均为equivClass[1]类。
+	for (int i = 1; i < 10; ++i)
+	{
+		cout << "Element " << i << " is in equivalence class " << find(i) << endl;
+	}
+}
+
 
 

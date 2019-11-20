@@ -53,7 +53,7 @@ ostream& operator<<(ostream& out, const studentRecord& x)  // 重载运算符 <<
 
 // 其他函数声明
 void binSort2(chain<studentRecord>& theChain, int range);
-
+void testUnionFindWithArrays(void);
 
 
 
