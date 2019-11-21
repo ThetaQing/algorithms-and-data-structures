@@ -49,13 +49,71 @@ ostream& operator<<(ostream& out, const studentRecord& x)  // 重载运算符 <<
 
 }*/
 
+/****************************************
+==========================================
+* 类名：unionFindWithArray
+* 类功能：数组实现合并集的合并、查找
+* 类的成员：
+	void initialize(int numberOfElement);  // 初始化函数
+	void unite(int classA, int classB);  // 合并函数
+
+	int find(int theElement); // 查找函数
+	void testMain();  // 测试函数
+
+==========================================
+*/
+class unionFindWithArray
+{
+public:
+
+
+	void initialize(int numberOfElement);
+
+	void unite(int classA, int classB);
+
+	int find(int theElement);
+	void testMain(void);
+private:
+	int* equivClass, n;  // 分别表示等价类数组和元素个数
+};
 
 
 // 其他函数声明
 void binSort2(chain<studentRecord>& theChain, int range);
 void testUnionFindWithArrays(void);
+// 链表节点的结构体声明
+struct  equivNode
+{
+	int equivClass;  // 元素类标识符
+	int size; // 类的元素个数
+	int next;  // 类中指向下一个元素的指针
+};
+/****************************************
+==========================================
+* 类名：unionFindWithChains
+* 类功能： 链表实现合并集的合并、查找
+* 类的成员：
+	void initialize(int numberOfElement);  // 初始化函数
+	void unite(int classA, int classB);  // 合并函数
+	 
+	int find(int theElement); // 查找函数
+	void testMain();  // 测试函数
 
+==========================================
+*/
 
+class unionFindWithChains
+{
+public:
+	void initialize(int numberOfElement);  // 初始化函数
+	void unite(int classA, int classB);  // 合并函数
+	 
+	int find(int theElement); // 查找函数
+	void testMain();  // 测试函数
 
+private:
+	equivNode* node;  // 节点的数组
+	int n; // 元素个数
+};
 #endif // !__BIN_SORT_H__
 #pragma once
