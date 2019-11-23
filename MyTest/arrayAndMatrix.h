@@ -49,6 +49,7 @@ public:
 	// 转置运算
 	matrix<T> trans();
 
+
 private:
 	int theRows;  // 矩阵的行数
 	int theColumns;  // 矩阵的列数
