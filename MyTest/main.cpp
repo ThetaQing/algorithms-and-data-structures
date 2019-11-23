@@ -70,18 +70,19 @@ public:
 	{
 		return a;
 	}
-	ostream& operator<< (ostream& outA);
+	
 private:
 	int a;
 };
-ostream& A::operator<< (ostream& outA)
+ostream& operator<< (ostream& outA, const A& x)
 {
-	outA << "this class A " << a;
+	outA << "this class A " << x.a;
 	return outA;
 }
 
 class B
 {
+	friend ostream& operator<< (ostream& outB, const B& x);
 public:
 	B() {};
 	B(int b) { this->b = b; };
@@ -94,13 +95,13 @@ public:
 		return x + b;
 	}
 	
-	ostream& operator<< (ostream& outB);
+
 private:
 	int b;
 };
-ostream& B::operator<< (ostream& outB)
+ostream& operator<< (ostream& outB, const B& x)
 {
-	outB << "this class B " << b;
+	outB << "this class B " << x.b;
 	return outB;
 }
 
@@ -108,8 +109,11 @@ int main()
 {
 	A a(2);
 	B b(4);
-	a << cout << endl;
-	b << cout << endl;
+	matrix<int> m(1, 1);
+	m(1, 1) = 4;
+	cout << a << endl;
+	cout << b << endl;
+	cout << m << endl;
 	testMain();
 	system("pause");
 	return 0;
