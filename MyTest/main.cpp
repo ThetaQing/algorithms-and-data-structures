@@ -68,23 +68,18 @@ public:
 	{
 		return a;
 	}
-	/*ostream& operator<< (ostream& outA)
+	ostream& operator<< (ostream& outA)
 	{
 		outA << "this class A " << a;
 		return outA;
-	}*/
+	}
 private:
 	int a;
 };
-ostream& operator<< (ostream& outA, const A & x)
-{
-	outA << "this class A " << x.a;
-	return outA;
-}
+
 
 class B
 {
-	friend ostream& operator<< (ostream& outA, const B& x);
 public:
 	B() {};
 	B(int b) { this->b = b; };
@@ -96,17 +91,15 @@ public:
 	{
 		return x + b;
 	}
-	
+	ostream& operator<< (ostream& outB)
+	{
+		outB << "this class B " << b;
+		return outB;
+	}
 
 private:
 	int b;
 };
-
-ostream& operator<< (ostream& outB,const B& x)
-{
-	outB << "this class B " << x.b;
-	return outB;
-}
 int main()
 {
 	
@@ -117,8 +110,8 @@ int main()
 	int b = b1 + 5;
 	int c = c1 + 9;
 	cout << a << "    " << b << "    " <<  c << endl;
-	cout << a1;
-	cout << b1;
+	a1 << cout;
+	b1 << cout;
 	//cout << b1;
 	system("pause");
 	return 0;
