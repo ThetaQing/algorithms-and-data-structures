@@ -42,57 +42,22 @@ void testMain()
 	matrix<int> test;
 	test = m + n; // 加法
 	cout << "test of +" << endl;
-	for (int i = 1; i <= 3; ++i)
-	{
-		for (int j = 1; j <= 4; ++j)
-		{
-			cout << test(i, j) << "\t";
-		}
-		cout << endl;
-	}
+	cout << test;
 	cout << "test of -" << endl;
 	test = m - n; // 减法
-	for (int i = 1; i <= 3; ++i)
-	{
-		for (int j = 1; j <= 4; ++j)
-		{
-			cout << test(i, j) << "\t";
-		}
-		cout << endl;
-	}
+	cout << test;
 
 	cout << "test of - （单目运算）" << endl;
 	test = -m ; // test of - （单目运算）
-	for (int i = 1; i <= 3; ++i)
-	{
-		for (int j = 1; j <= 4; ++j)
-		{
-			cout << test(i, j) << "\t";
-		}
-		cout << endl;
-	}
+	cout << test;
 
 	cout << "test of trans" << endl;
 	test = m.trans(); // 转置运算
-	for (int i = 1; i <= 4; ++i)
-	{
-		for (int j = 1; j <= 3; ++j)
-		{
-			cout << test(i, j) << "\t";
-		}
-		cout << endl;
-	}
+	cout << test;
 
 	test = m * test  ;  // 乘法
 	cout << "test of trans" << endl;
 	
-	for (int i = 1; i <= 3; ++i)
-	{
-		for (int j = 1; j <= 3; ++j)
-		{
-			cout << test(i, j) << "\t";
-		}
-		cout << endl;
-	}
+	cout << test;
 
 }
