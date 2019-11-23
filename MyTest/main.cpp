@@ -70,15 +70,15 @@ public:
 	{
 		return a;
 	}
-	ostream& operator<< (ostream& outA)
-	{
-		outA << "this class A " << a;
-		return outA;
-	}
+	ostream& operator<< (ostream& outA);
 private:
 	int a;
 };
-
+ostream& A::operator<< (ostream& outA)
+{
+	outA << "this class A " << a;
+	return outA;
+}
 
 class B
 {
@@ -93,20 +93,23 @@ public:
 	{
 		return x + b;
 	}
-	ostream& operator<< (ostream& outB)
-	{
-		outB << "this class B " << b;
-		return outB;
-	}
-
+	
+	ostream& operator<< (ostream& outB);
 private:
 	int b;
 };
-
+ostream& B::operator<< (ostream& outB)
+{
+	outB << "this class B " << b;
+	return outB;
+}
 
 int main()
 {
-	
+	A a(2);
+	B b(4);
+	a << cout << endl;
+	b << cout << endl;
 	testMain();
 	system("pause");
 	return 0;
