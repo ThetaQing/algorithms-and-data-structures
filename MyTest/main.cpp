@@ -1,8 +1,10 @@
 
 #include <iostream>
 #include <sstream>
-#include "test.h"
-//#include "arrayAndMatrix.h"
+
+#include "arrayAndMatrix.h"
+#include <string>
+using std::string;
 using namespace std;
 
 class score
@@ -100,19 +102,12 @@ public:
 private:
 	int b;
 };
+
+
 int main()
 {
 	
-	A a1(3), a2(4);
-	B b1(5), b2(6);
-	C c1(7), c2(8);
-	int a = a1 + 4;
-	int b = b1 + 5;
-	int c = c1 + 9;
-	cout << a << "    " << b << "    " <<  c << endl;
-	a1 << cout;
-	b1 << cout;
-	//cout << b1;
+	testMain();
 	system("pause");
 	return 0;
 }
