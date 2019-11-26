@@ -99,4 +99,6 @@
 	为此定义丁姐matrixTerm，使其具有三个数据成员，整型row、col和T类型value。  
  * 用多个线性表描述  
    > 如果把每一行的非0元素用一个线性表存储，就得到描述稀疏矩阵的另一种方法。  
-   
+##### 5 性能比较
+ 类sparseMatrix和linkedMatrix对空间的需求近似，然而对前者可以改进，减少33%的空间，但是没有减少运行时间。linkedMatrix方法虽然比sparseMatrix方法慢，
+ 但是比2DArray方法；sparseMatrix方法与2DArray方法比，时间减少的程度比较显著，矩阵加法和转置的时间大约是后者的1/20.
