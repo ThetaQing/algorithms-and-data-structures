@@ -1,6 +1,7 @@
 #include <iostream>
 #include "arrayAndMatrix.h"
-
+#include "diagonalMatrix.h"
+#include "overloadOperator.h"
 using namespace std;
 
 /*****************ÎÄ¼şÃèÊö********************
@@ -12,23 +13,7 @@ using namespace std;
 
 **/
 
-// for some reason compiler can't create this on its own
-ostream& operator<<(ostream& out, const matrix<int>& m)
-{// Put matrix m into the stream out.
- // One row per line.
 
-	int k = 0;  // index into element array
-	for (int i = 0; i < m.theRows; i++)
-	{// do row i
-		for (int j = 0; j < m.theColumns; j++)
-			out << m.element[k++] << "  ";
-
-		// row i finished
-		out << endl;
-	}
-
-	return out;
-}
 
 void testMain()
 {
@@ -60,5 +45,56 @@ void testMain()
 	cout << "test of trans" << endl;
 	
 	cout << test;
+	cout << "*****************¶Ô½Ç¾ØÕó²âÊÔ*******************" << endl;
+	diagonalMatrix<int> dm(4);
+	for (int i = 1; i <= 4; ++i)
+	{
+		dm.set(i, i, i);
+	}
+	for (int i = 1; i <= 4; ++i)
+	{
+		for (int j = 1; j <= 4; ++j)
+		{
+			cout << dm.get(i, j) << "\t";
+		}
+		cout << endl;
+	}
 
+	cout << "**********************Èı¶Ô½Ç¾ØÕó²âÊÔ******************" << endl;
+	tridiagonalMatrix<int> tm(5);
+	for (int i = 2; i <= 4; ++i)
+	{
+		tm.set(i, i + 1, 3);
+		tm.set(i, i, 2);
+		tm.set(i, i - 1, 1);
+	}
+	tm.set(1, 2, 3);
+	tm.set(1, 1, 2);
+	tm.set(2, 1, 1);
+	tm.set(5, 5, 2);
+	tm.set(5, 4, 1);
+	for (int i = 1; i <= 5; ++i)
+	{
+		for (int j = 1; j <= 5; ++j)
+		{
+			cout << tm.get(i, j) << "\t";
+		}
+		cout << endl;
+	}
+
+	/******************************************
+	===============²âÊÔÊ§°Ü===============
+	cout << "**********************Ï¡Êè¾ØÕó²âÊÔ******************" << endl;
+	sparseMatrix<int> sm1,sm2,sm;
+	cin >> sm1;
+	cin >> sm2;
+	cin >> sm;
+	sm.transpose(sm);
+	cout << "×ªÖÃÖ®ºóµÄsm¾ØÕó" << endl;
+	cout << sm;
+	sm1.add(sm2, sm);
+	cout << "smÎªsm1+sm2µÄºÍ¾ØÕó" << endl;
+	cout << sm;
+
+	*/
 }

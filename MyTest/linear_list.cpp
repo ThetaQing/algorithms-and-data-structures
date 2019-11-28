@@ -1,6 +1,6 @@
 #include <iostream>
 #include "linear_list.h"
-#include "bin_sort.h"
+#include "linear_list_apply.h"
 using namespace std;
 
 
@@ -23,16 +23,16 @@ void testBinSort()
 	A = "A";
 	B = "B";
 	C = "C";
-	studentRecord student1{ &A, 3 }, student2{ &B,1 }, student3{&C, 2};
+	studentRecord student1{ &A, 3 }, student2{ &B,1 }, student3{&C, 2};  // 定义数据
 	
 	
 
 	the_chain.insert(0, student1);
 	the_chain.insert(0, student2);
 	the_chain.insert(0, student3);
-	//the_chain.output(*out);
+	
 	cout << "  " << the_chain << endl;
-	the_chain.binSort(4);
+	the_chain.binSort(4);  // 参数是输入数的最大值
 	cout << "  " << the_chain<< endl;
-	//the_chain.output(*out);
+	
 }
