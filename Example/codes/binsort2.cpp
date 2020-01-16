@@ -48,21 +48,12 @@ void testBinSort()
 	//the_chain.output(*out);
 }
 
+/*
 int main()
 {
 
 	testBinSort();
-	/*
-	int a = 0;
-	int* p = &a;
-	vector <int> vec{ 1,2,4,3,2 };
-	int array[10] = { 8, 1, 14, 3, 21, 5, 7, 10, 45, -11 };
-
-	for (auto it : vec)
-	{
-		cout << it << endl;
-	}
-	*/
+	
 	system("pause");
 	return 0;
-}
+}*/
